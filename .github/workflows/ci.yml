@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: volta-cli/action@v1
 
       - name: install dependencies
@@ -45,7 +45,7 @@ jobs:
             node-version: 12.x
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: volta-cli/action@v1
         with:
           node-version: ${{ matrix.node-version }}
@@ -63,7 +63,7 @@ jobs:
     needs: [test]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: volta-cli/action@v1
         with:
           node-version: 14.x
